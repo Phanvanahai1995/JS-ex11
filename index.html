@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Font embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Reset -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="#!">
+              <img
+                src="https://cdnweb.dantri.com.vn/dist/static-logo.1-0-1.742f36bc45f3443d0e59.svg"
+                alt=""
+                class="header-image"
+              />
+            </a>
+          </div>
+          <div class="header-time">
+            <span class="header-address">Hà Nội</span>
+            <span class="header-date">Thứ 6, 22/03/2024</span>
+          </div>
+          <div class="header-temp">
+            <svg
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M60.156 68.75c18.985 0 34.375-15.39 34.375-34.375S79.141 0 60.156 0C41.172 0 25.781 15.39 25.781 34.375S41.171 68.75 60.156 68.75Z"
+                fill="#5A6164"
+              ></path>
+              <path
+                d="M34.375 25.781C15.391 25.781 0 41.171 0 60.156a8.569 8.569 0 0 0 8.594 8.594h51.562a8.569 8.569 0 0 0 8.594-8.594c0-18.984-15.39-34.375-34.375-34.375Z"
+                fill="#374043"
+              ></path>
+              <path
+                d="M75 100c13.807 0 25-11.193 25-25S88.807 50 75 50 50 61.193 50 75s11.193 25 25 25Z"
+                fill="#CFFFFF"
+                fill-opacity="0.8"
+              ></path>
+              <path
+                d="M56.25 68.75c-13.828 0-25 11.172-25 25 0 3.438 2.813 6.25 6.25 6.25H75c3.438 0 6.25-2.813 6.25-6.25 0-13.828-11.172-25-25-25Z"
+                fill="#CDFAFA"
+              ></path>
+            </svg>
+            <span class="header-temp__desc">23°C</span>
+          </div>
+          <nav class="navbar">
+            <ul class="navbar-menu">
+              <li class="navbar-item">
+                <img
+                  src="https://cdnweb.dantri.com.vn/dist/static-dansinh-logo.1-0-1.9fc9db9740e6e6104af7.svg"
+                  alt=""
+                  class="navbar-item__icon"
+                />
+                <a href="#!" class="navbar-link">Dân sinh</a>
+              </li>
+              <li class="navbar-item">
+                <img
+                  src="https://cdnweb.dantri.com.vn/dist/static-fica-logo.1-0-1.2435f041ebf869641575.jpg"
+                  alt=""
+                  class="navbar-item__icon"
+                />
+                <a href="#!" class="navbar-link">Fica</a>
+              </li>
+              <li class="navbar-item">
+                <img
+                  src="https://cdnweb.dantri.com.vn/dist/static-avatar-default.1-0-1.b474c6ca2d1abee5b89b.png"
+                  alt=""
+                  class="navbar-item__icon"
+                />
+                <a href="#!" class="navbar-link">DTiNews</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-form">
+            <i class="fa-regular fa-user"></i>
+            <span>Đăng nhập</span>
+            <a href="#!" class="header-form__link">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+        </div>
+        <div class="form-container hidden">
+          <!-- Header form -->
+          <div class="form-header">
+            <div class="form-image">
+              <img
+                src="https://cdnweb.dantri.com.vn/dist/c7b827391b2f30b6fbaf.png"
+                alt=""
+                class="form-logo"
+              />
+            </div>
+            <div class="form-choose">
+              <span class="register register-active">Đăng nhập</span>
+              <span class="register">Đăng ký</span>
+            </div>
+          </div>
+
+          <!-- Register -->
+          <div class="form-register form-dk">
+            <div class="form-desc">với các tài khoản mạng xã hội</div>
+            <div class="form-list">
+              <a href="#!" class="form-item">
+                <img
+                  src="https://cdnweb.dantri.com.vn/dist/602a5aca41bdeb805571.svg"
+                  alt=""
+                />
+                <span>Google</span>
+              </a>
+              <a href="#!" class="form-item">
+                <img
+                  src="https://cdnweb.dantri.com.vn/dist/05804407650f4479d9ef.svg"
+                  alt=""
+                />
+                <span>Facebook</span>
+              </a>
+            </div>
+            <div class="form-decorate">
+              <span class="form-separate"></span>
+              hoặc
+              <span class="form-separate"></span>
+            </div>
+            <form id="form-register">
+              <div class="form-input">
+                <label for="email-register">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email-register"
+                  placeholder="Email"
+                />
+                <span class="hide-error"></span>
+              </div>
+              <div class="form-input form-mt">
+                <label for="password-register">Mật khẩu</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password-register"
+                  placeholder="Mật khẩu"
+                />
+                <i class="fa-regular fa-eye fa-hidden"></i>
+                <span class="hide-error"></span>
+              </div>
+              <div class="form-forget">
+                <a href="#!" class="form-link">Quên mật khẩu?</a>
+              </div>
+              <button class="form-btn">Đăng nhập</button>
+            </form>
+          </div>
+          <!-- End register -->
+          <!-- Login -->
+          <div class="form-login form-dk form-hidden">
+            <div class="form-desc">
+              Hoàn thành đăng ký, và bắt đầu trải nghiệm
+            </div>
+            <form id="form-login">
+              <div class="form-input">
+                <label for="username">Họ và tên</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="username"
+                  placeholder="Họ và tên"
+                />
+                <span class="hide-error"></span>
+              </div>
+              <div class="form-input form-mt">
+                <label for="email-login">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email-login"
+                  placeholder="Email"
+                />
+                <span class="hide-error"></span>
+              </div>
+              <div class="form-input form-mt">
+                <label for="password-login">Mật khẩu</label>
+
+                <input
+                  type="password"
+                  name="password"
+                  id="password-login"
+                  placeholder="Mật khẩu"
+                />
+                <i class="fa-regular fa-eye fa-hidden"></i>
+
+                <span class="hide-error"></span>
+              </div>
+              <div class="form-info">
+                Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi
+                <a href="">điều kiện về qui định và chính sách của Dân trí</a>
+              </div>
+              <button class="form-btn">Đăng ký</button>
+            </form>
+          </div>
+          <!-- End login -->
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </header>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
