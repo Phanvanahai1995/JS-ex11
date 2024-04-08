@@ -20,6 +20,7 @@ const hidePasswordLoginEl = document.querySelector("#form-login .fa-hidden");
 
 const inputArr = document.querySelectorAll("input");
 const spanELs = document.querySelectorAll(".hide-error");
+const formInputs = document.querySelectorAll(".form-input");
 
 ////////////////// Modal
 // function open Modal
@@ -45,6 +46,30 @@ document.addEventListener("keydown", function (e) {
 ////////////////// End Modal
 
 ///////////////// Form validator
+
+// Function choose form register or login
+
+function removeDataForm() {
+  inputArr.forEach((input) => (input.value = ""));
+  formInputs.forEach((el) => {
+    el.classList.remove("error");
+    el.classList.remove("success");
+  });
+  spanELs.forEach((span) => (span.innerHTML = ""));
+}
+
+formChoose.addEventListener("click", function (e) {
+  e.preventDefault();
+  btnRegister.forEach((form) => {
+    form.classList.toggle("register-active");
+    removeDataForm();
+  });
+
+  btnLogin.forEach((form) => {
+    form.classList.toggle("form-hidden");
+    removeDataForm();
+  });
+});
 
 // Function show input error message
 function showError(input, message) {
@@ -137,29 +162,6 @@ function handleHideHiddenPassword(password, el) {
     el.classList.replace("fa-eye-slash", "fa-eye");
   }
 }
-
-// Function choose form register or login
-
-function removeDataForm(form, btn) {
-  inputArr.forEach((input) => {
-    input.value = "";
-    input.style.borderColor = "#ccc";
-  });
-  spanELs.forEach((span) => (span.innerHTML = ""));
-}
-
-formChoose.addEventListener("click", function (e) {
-  e.preventDefault();
-  btnRegister.forEach((form) => {
-    form.classList.toggle("register-active");
-    removeDataForm(form);
-  });
-
-  btnLogin.forEach((form) => {
-    form.classList.toggle("form-hidden");
-    removeDataForm(form);
-  });
-});
 
 /////////////////////// Event
 
