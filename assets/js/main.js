@@ -35,12 +35,19 @@ const handlerCloseModal = function () {
   overlay.classList.add("hidden");
 };
 
-// Handle Even
+// Handle Even Modal
 elRegister.addEventListener("click", handlerOpenModal);
-overlay.addEventListener("click", handlerCloseModal);
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") handlerCloseModal();
+overlay.addEventListener("click", () => {
+  removeDataForm();
+  handlerCloseModal();
+});
+
+document.addEventListener("keyup", function (e) {
+  if (e.key === "Escape") {
+    removeDataForm();
+    handlerCloseModal();
+  }
 });
 
 ////////////////// End Modal
@@ -51,11 +58,11 @@ document.addEventListener("keydown", function (e) {
 
 function removeDataForm() {
   inputArr.forEach((input) => (input.value = ""));
+  spanELs.forEach((span) => (span.innerHTML = ""));
   formInputs.forEach((el) => {
     el.classList.remove("error");
     el.classList.remove("success");
   });
-  spanELs.forEach((span) => (span.innerHTML = ""));
 }
 
 formChoose.addEventListener("click", function (e) {
