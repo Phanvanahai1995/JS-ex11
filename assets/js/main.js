@@ -2,6 +2,7 @@
 
 const elRegister = document.querySelector(".header-form span");
 const formContainer = document.querySelector(".form-container");
+const btnClose = document.querySelector(".btn-close");
 const overlay = document.querySelector(".overlay");
 const formChoose = document.querySelector(".form-choose");
 const btnRegister = document.querySelectorAll(".register");
@@ -38,9 +39,14 @@ const handlerCloseModal = function () {
 // Handle Even Modal
 elRegister.addEventListener("click", handlerOpenModal);
 
-overlay.addEventListener("click", () => {
-  removeDataForm();
+overlay.addEventListener("click", function () {
   handlerCloseModal();
+  removeDataForm();
+});
+
+btnClose.addEventListener("click", function () {
+  handlerCloseModal();
+  removeDataForm();
 });
 
 document.addEventListener("keyup", function (e) {

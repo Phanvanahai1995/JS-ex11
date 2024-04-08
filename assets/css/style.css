@@ -254,3 +254,11 @@ input {
   visibility: hidden;
   opacity: 0;
 }
+
+.btn-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
