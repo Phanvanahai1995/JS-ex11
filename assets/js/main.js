@@ -194,14 +194,14 @@ hidePasswordLoginEl.addEventListener("click", () => {
 // Application
 
 function setDataUserRegister(email, password) {
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
+  localStorage.setItem("emailRegister", email);
+  localStorage.setItem("passwordRegister", password);
 }
 
 function setDataUserLogin(username, email, password) {
-  localStorage.setItem("username", username);
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
+  localStorage.setItem("usernameLogin", username);
+  localStorage.setItem("emailLogin", email);
+  localStorage.setItem("passwordLogin", password);
 }
 
 // Submit Form event
