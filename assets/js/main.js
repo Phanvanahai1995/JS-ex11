@@ -234,7 +234,7 @@ formLogin.addEventListener("submit", function (e) {
       input.classList.contains("success")
     )
   ) {
-    setDataUserLogin(username, emailLogin, passwordLogin);
+    setDataUserLogin(username.value, emailLogin.value, passwordLogin.value);
     removeDataForm();
   }
 });
