@@ -22,7 +22,10 @@ const hidePasswordLoginEl = document.querySelector("#form-login .fa-hidden");
 const inputArr = document.querySelectorAll("input");
 const spanELs = document.querySelectorAll(".hide-error");
 const formInputs = document.querySelectorAll(".form-input");
-
+const formInputsRegister = document.querySelectorAll(
+  "#form-register .form-input"
+);
+const formInputsLogin = document.querySelectorAll("#form-login .form-input");
 ////////////////// Modal
 // function open Modal
 const handlerOpenModal = function () {
@@ -188,6 +191,19 @@ hidePasswordLoginEl.addEventListener("click", () => {
   handleHideHiddenPassword(passwordLogin, hidePasswordLoginEl);
 });
 
+// Application
+
+function setDataUserRegister(email, password) {
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+}
+
+function setDataUserLogin(username, email, password) {
+  localStorage.setItem("username", username);
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+}
+
 // Submit Form event
 
 formRegister.addEventListener("submit", function (e) {
@@ -195,6 +211,15 @@ formRegister.addEventListener("submit", function (e) {
   checkRequired([emailRegister, passwordRegister]);
   checkLength(passwordRegister, 6, 25);
   checkEmail(emailRegister);
+
+  if (
+    Array.from(formInputsRegister).every((input) =>
+      input.classList.contains("success")
+    )
+  ) {
+    setDataUserRegister(emailRegister.value, passwordRegister.value);
+    removeDataForm();
+  }
 });
 
 formLogin.addEventListener("submit", function (e) {
@@ -203,4 +228,13 @@ formLogin.addEventListener("submit", function (e) {
   checkLength(passwordLogin, 6, 25);
   checkLength(username, 6, 25);
   checkEmail(emailLogin);
+
+  if (
+    Array.from(formInputsLogin).every((input) =>
+      input.classList.contains("success")
+    )
+  ) {
+    setDataUserLogin(username, emailLogin, passwordLogin);
+    removeDataForm();
+  }
 });
